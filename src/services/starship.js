@@ -59,7 +59,7 @@ export default class Starship {
 	async read() {
 		try {
 			var starship = await service.getJSON(this.url);
-			this.set(starship);
+			this.set(starship.data);
 			return this;
 		} catch (error) {
 			throw error;

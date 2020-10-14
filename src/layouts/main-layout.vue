@@ -1,12 +1,14 @@
 <template>
   <div class="container">
-    <ul>
-      <li>
-        <a href="/">GO BACK</a>
-      </li>
-    </ul>
-
+    <slot name="title"></slot>
     <slot></slot>
+	<ul>
+		<li>
+			<slot name="actions">
+				<a href="/">GO BACK</a>
+			</slot>
+		</li>
+	</ul>
   </div>
 </template>
 

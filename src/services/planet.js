@@ -53,7 +53,7 @@ export default class Planet {
 	async read() {
 		try {
 			var planet = await service.getJSON(this.url);
-			this.set(planet);
+			this.set(planet.data);
 			return this;
 		} catch (error) {
 			throw error;

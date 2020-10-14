@@ -63,8 +63,8 @@ export default class People {
 
 	async read() {
 		try {
-			var people = await service.getJSON(this.url);
-			this.set(people);
+			var response = await service.getJSON(this.url);
+			this.set(response.data);
 			return this;
 		} catch (error) {
 			throw error;
