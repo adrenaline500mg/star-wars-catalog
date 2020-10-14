@@ -1,13 +1,9 @@
+
+import Axios from 'axios'
 class Service {
 	async getJSON(url) {
 		try {
-			var response = await $.ajax({
-				url: url,
-				type: 'GET',
-				dataType: 'json',
-				contentType: 'application/json'
-			});
-
+			var response = await Axios.get(url);
 			return response;
 		} catch (error) {
 			throw error;

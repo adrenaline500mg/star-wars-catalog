@@ -10,8 +10,8 @@ const app = new Vue({
     ViewComponent () {
       const matchingView = routes[this.currentRoute]
       return matchingView
-        ? require('./pages/' + matchingView + '.vue')
-        : require('./pages/404.vue')
+        ? require('./views/' + matchingView + '.vue')
+        : require('./views/404.vue')
     }
   },
   render (h) {
